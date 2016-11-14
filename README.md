@@ -1,2 +1,2 @@
 # hello-world
-noob
+researcher in progress, reader, Formula 1 fan
