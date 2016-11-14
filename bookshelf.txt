@@ -1,0 +1,31 @@
+var book = [
+    {
+        title: "The Giver",
+        stars: 4,
+        author: "Lois Lowry",
+        //color: color(241, 255, 219);
+    },
+    { 
+        title: "Mary Poppins",
+        stars: 4,
+        author: "P. L. Travers",
+        //color: color(242, 140, 156);
+    }
+];
+
+// draw shelf
+fill(173, 117, 33);
+rect(0, 120, width, 10);
+
+for (var i = 0; i < book.length; i++) {
+    // draw some books
+    fill(214, 255, 219);
+    rect(135*i+10, 20, 90, 100);
+    fill(0, 0, 0);
+    text(book[i].title, 135*i+15, 29, 80, 100);
+    text(book[i].author, 135*i+15, 46, 70, 100);
+    for (var j = 0; j < book[i].stars; j++) {
+        image(getImage("cute/Star"), 13+j*20, 90,20, 30);
+        image(getImage("cute/Star"), 150+j*20, 90,20, 30);
+    }
+}
